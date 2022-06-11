@@ -1,0 +1,94 @@
+body {
+  background-color: #724C21;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #FFF;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0 0 1px rgba(0,0,0,.3)
+}
+
+.line {
+  content: '';
+  display: block;
+  height: 100px;
+  width: 4px;
+  background-color: #FFF;
+  margin: 0 auto;
+  transform-origin: center;
+  animation: animate 3s linear infinite;
+}
+
+.banner {
+  width: 350px;
+  height: 85px;
+  background-color: #FFF;
+  transform-origin: top;
+  animation: animate 2.9s linear infinite;
+}
+
+.button {
+  position: absolute;
+  top: 108%;
+  left: 36%;
+
+}
+
+.button:hover {  
+  transition: all .3s ease-in-out; 
+  transform: scale(1.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  line-height: 90px;
+  color: #724C21;
+}
+
+h2 {
+  color: #FFF;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(-2deg);
+  }
+  
+  50% {
+    transform: rotate(2deg);
+  }
+  
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+/* Media Query For Phone */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .banner {
+    width: 325px;    
+  }
+
+  .button {
+    left: 35%;  
+  }
+}

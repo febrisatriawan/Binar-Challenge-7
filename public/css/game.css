@@ -1,0 +1,261 @@
+*
+
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #9C835F;
+  height: 100%;
+}
+  
+h1,h2,h3{
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+}
+  
+.back{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-size: 40px;
+  display: grid;
+  place-items: center;
+}
+
+.back:hover {
+  transform: scale(1.2);
+}
+
+.back a {
+  color: #724C21;
+  text-decoration: none;
+} 
+
+.back a:hover {
+  background-color: #F9B23D; border-radius: 100px;
+}
+
+/* Navigation */
+nav{
+  padding: 20px 37px;
+  display: flex;
+  flex-direction: row;
+}
+  
+nav .favicon{
+  padding: 0 35px;
+  transition: all .3s ease-in-out; 
+}
+  
+nav .favicon img{
+  width: 65px;
+}
+  
+nav .favicon {
+  font-size: 50px;
+  color: #724C21;
+  padding-top: 10px;
+}
+
+.favicon:hover { 
+  transform: scale(1.2); 
+}
+  
+nav p{
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:#F9B23D;
+  padding-top: 10px;
+}
+  
+/* Game Area */
+.container{
+  padding: 0 11rem;
+  }
+  
+main .game{
+  padding: 0 10rem ;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+  
+main .game .info-board{
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-self: center;
+}
+  
+main .game #player, main .game #computer, main .game .info-board{
+  height: 100%;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+}
+  
+main .game h2{
+  letter-spacing: 5px;
+  font-size: 2em;
+  padding: 0.5em 0;
+}
+  
+main .game img{
+  margin: 0.2em;
+  display: inline-block;
+  transition: all .3s ease-in-out; 
+    
+}
+
+main .game img:hover { 
+  transform: scale(1.2); 
+}
+  
+main img.rock{
+  width: 150px;
+  padding: 30px 30px;
+  transition: all .3s ease-in-out; 
+}
+  
+main img.paper{
+  width: 150px;
+  padding: 20px 40px;
+  transition: all .3s ease-in-out; 
+}
+  
+main img.scissors{
+  width: 150px;
+  padding: 20px 35px;
+  transition: all .3s ease-in-out; 
+}
+
+main .game img.image-paper{
+  padding: 10px 18px;
+}
+  
+#player .rock:hover,#player .paper:hover, #player .scissors:hover{
+  background-color: #c4c4c4;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.restart img:hover {
+  transform: rotate(-360deg);
+  transition: width 3s, height 3s,transform 3s;
+}
+  
+main .restart{
+  display: flex;
+  justify-content: center;
+}
+  
+main .restart img{
+  width: 55px;
+  cursor: pointer;
+}
+  
+/* classes for DOM */
+.pick{
+  background-color: #c4c4c4; 
+  padding: 14px;
+  border-radius: 30px;
+}
+  
+
+.board{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-size: 38px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  background: #4C9654;
+  border-radius: 25px;
+  margin:  15px auto;
+  padding: 15px;       
+  transition: all .3s ease-in; 
+}
+
+.board:hover { 
+  transform: scale(1.); 
+}
+  
+.result{
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-align: center;
+}
+  
+.vs{
+  font-size: 6.3em;
+  font-weight: bold;
+  color:#BD0000;
+  letter-spacing: 5px;
+}
+  
+/* Media Query */
+@media(max-width: 1024px){
+  .container{
+      padding: 0 3rem;
+    }
+  }
+  @media(max-width: 768px){
+    .container{
+      padding: 0;
+    }
+  
+    main .game{
+      padding: 0 5rem;
+    }
+
+    #player .rock:hover,#player .paper:hover, #player .scissors:hover{
+      background-color: #c4c4c4;
+      border-radius: 30px;
+      cursor: pointer;      
+    }
+
+  }
+
+@media(max-width: 425px){
+  nav{
+    padding: 20px 10px;
+  }
+
+  nav p{
+    font-size: 1.3em;
+  }
+  
+  main img.rock{
+    width: 120px;
+  }
+  
+  main img.paper{
+    width: 120px;
+  }
+  
+  main img.scissors{
+    width: 120px;
+  }
+  
+  main .game h2{
+    font-size: 1.2em;
+  }
+    
+  .result{
+    font-size: 1em;
+  }
+  
+  .board{
+    width: 100px;
+    height: 100px;
+     }
+  }

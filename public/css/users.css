@@ -1,0 +1,19 @@
+.container {
+  height: 50vh;
+  position: relative;
+  top: 2em;
+}
+
+.btn-edit {
+  padding: 0.04em 0.4em;
+  background-color: rgba(113, 255, 175, 0.6);
+  border-color: rgb(209, 250, 229);
+  color: black;
+}
+
+.btn-delete {
+  padding: 0.04em 0.4em;
+  background-color: rgba(253, 170, 170, 0.6);
+  border-color: rgb(209, 250, 229);
+  color: black;
+}

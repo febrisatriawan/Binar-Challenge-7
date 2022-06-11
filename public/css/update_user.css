@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+}
+
+.box-shadow {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  max-width: 1000px;
+}
+
+.btn-primary:hover {
+  background-color: #2c0b8e;
+  border-radius: 7px;
+}
+
+.color {
+  color: #2c0b8e;
+}
+
+
+.css-button-retro--grey {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #000;
+  color: white;
+  background: transparent;
+}
+.css-button-retro--grey:hover:after {
+  top: 0;
+  left: 0;
+}
+.css-button-retro--grey:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+  background-color: #2c0b8e;
+}
