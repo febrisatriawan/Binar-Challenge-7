@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ("partials/head", { title: "Detail", href: "/asset/styling.css" }); %>
+
+  <body>
+    <div class="table-responsive-sm">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>username</th>
+              <th>password</th>
+              <th>role</th>
+              <th>biodata</th>
+              <th class="d-print-none">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td><%= data.id %></td>
+                <td><%= data.username %></td>
+                <td><%= data.password %></td>
+                <td><%= data.role %></td>
+                <td><%= data.nama %></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+  </body>
+</html>

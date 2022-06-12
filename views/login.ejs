@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/create_user.css" />
-    <title>Login</title>
-  </head>
+  <%- include ("partials/head", { title: "Login", href: "/assets/login.css" }); %>
   <body>
+    <%- include ("partials/navbar"); %>
     <div class="container d-flex align-items-center justify-content-center">
       <form action="/login" method="POST" class="box-shadow px-5 pb-5 pt-1">
         <div class="img-text text-center">         
-          <h2 class="text-center px-4">SIGN IN</h2>
+          <h2 class="text-center px-4">LOGIN</h2>
         </div>
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
@@ -26,6 +15,7 @@
             class="form-control"
             id="username"
             name="username"
+            placeholder="username"
             aria-describedby="emailHelp"
           />
         </div>
@@ -36,6 +26,7 @@
             class="form-control"
             id="password"
             name="password"
+            placeholder="password"
           />
         </div>
         <div class="mb-3 form-check">
@@ -44,7 +35,7 @@
             >Remember me</label
           >
         </div>
-        <button type="submit" class="btn btn-primary w-100">Sign in</button>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
       </form>
     </div>
   </body>

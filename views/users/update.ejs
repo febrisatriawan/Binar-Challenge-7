@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ("partials/head", { title: "Update", href: "/asset/styling.css" }); %>
+
+  <body>
+    <div class="card card-outline-secondary">
+      <div class="card-header">
+        <h3 class="mb-0">Update User</h3>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/users/update/<%= data.id %>">
+          <fieldset>
+            <label class="mb-0" for="username">Username</label>
+            <div class="row mb-1">
+              <div class="col-lg-12">
+                <input class="form-control" name="username"  type="text" value="<%= data.username %>">
+              </div>
+            </div>
+           <label class="mb-0" for="password">Password</label>
+            <div class="row mb-1">
+              <div class="col-lg-12">
+                <input class="form-control"  name="password" required="" type="text" value="<%= data.password %>">
+              </div>
+            </div>
+            <label class="mb-0" for="role">Role</label>
+            <div class="row mb-1">
+              <div class="col-lg-12">
+                <input class="form-control" name="role"  type="text" value="<%= data.role %>">
+              </div>
+            </div>
+          <label class="mb-0" for="nama">Nama (Biodata)</label>
+            <div class="row mb-1">
+              <div class="col-lg-12">
+                <input class="form-control"  name="nama" required="" rows="6" value="<%= data.nama %>"></input>
+              </div>
+            </div>
+          <button class="btn btn-secondary btn-lg float-right" type="submit">Update User</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+  
+</html>

@@ -1,0 +1,498 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+html, body {
+    margin: 0px;
+}
+
+body {
+    font-family:'Open Sans', serif;
+
+}
+
+.headernavbar {
+    color: white;
+    background-color: rgba(0,0,0,.2);
+}
+
+.navbar-brand {
+    padding-left: 5%;
+    color:white;
+}
+
+.navbar-brand:hover {
+    color:white;
+}
+
+.nav-link {
+    color:white;
+}
+
+.nav-link:hover {
+    color:lightgray;
+}
+
+.signuplogin{
+    color:white;
+}
+
+.navbar-toggler {
+    border-color: black;
+    background-color: rgba(0,0,0,.6);
+}
+
+ /* hero class */
+
+ /* font dan object ngikutin vh vw agar responsif dont use media */
+
+.hero {
+    background: url(/img/main-bg.jpg);
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    background-size: cover;
+    background-position:center;
+}
+
+.hero-master {
+    height: 100%;
+    display:grid;
+    align-items:center;
+    text-align: center;
+    grid-template-rows: auto 10%;
+}
+
+/* test case untuk page 1 */
+
+.hero-title {
+    overflow: hidden;
+}
+
+.hero-title h1 {
+    padding-top: 10%;
+    color: white;
+}
+
+
+.hero-title h4 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+}
+
+.hero-button {
+    padding-bottom: 10%;
+}
+
+.buttonhero {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    line-height: 1.1;
+    top: 25%;
+    }
+
+.bottom-text {
+        padding-top: 10%;
+        color: white;
+    }
+
+
+/* game */
+.section2 {
+    background: url(/img/the-games-bg.jpg);
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    background-size: cover;
+}
+
+.game-content {
+    padding-top: 10%;
+    height: 100%;
+    min-height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: 1fr; */
+    grid-template-areas:
+      "title" "carousel" "carousel" "carousel" "carousel" ;
+}
+
+@media (min-width: 1020px) {
+    .section2 {
+        background: url(/img/the-games-bg.jpg);
+        width: 100%;
+        height: 100vh;
+        position:relative;
+        background-size: cover;
+    }
+    .game-content {
+        padding-top: 10%;
+        height: 100%;
+        min-height: 300px;
+        width: 100%;
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "title carousel carousel carousel carousel";
+    }
+    .d2 {
+        left: 10%;
+        padding-top: 10%;
+    }
+  }
+
+  .d1 {
+      grid-area: title;
+      color: white;
+  }
+
+  .d1 h1 {
+      font-size: 72px;
+  }
+
+  .d1 p {
+      font-size: 24px;
+  }
+
+  .d2 {
+      grid-area: carousel;
+  }
+
+
+
+
+
+/* features */
+
+.features {
+    
+    width: 100%;
+    height: 100vh;
+    position:relative; 
+    background: url(/img/features.jpg);
+    background-size: cover;
+}
+
+@media (min-width: 1020px) {
+    .features {
+    width: 100%;
+    height: 100vh;
+    position:relative; 
+    background: url(/img/features.jpg);
+    background-size: cover;
+    }
+}
+
+.list {
+    margin-top: 12%;
+}
+
+.features-title {
+    color: white;
+    margin-top: 35%;
+}
+
+.features-list h3 {
+    padding-top: 5%;
+    color: orange;
+}
+
+.features-list p {
+    padding-top: 5%;
+    color: white;
+}
+
+.feature-subtitle {
+    padding-top: 3%;
+    color: white;
+}
+
+/* system-req */
+
+.system-req {
+    width: 100%;
+    height: 100vh;
+    position:relative; 
+    background: url(/img/requirements.png);
+    background-size: cover;
+}
+
+.system-master {
+    padding-top: 5%;
+}
+
+.content-system-req {
+    padding-top: 5%;
+
+}
+
+
+
+.system-req-title h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.table-list {
+    padding-top: 5%;
+}
+
+.table-list h2 {
+color: orange;
+}
+
+.table-list p {
+    color: white;
+}
+
+/* testimonials */
+
+
+.testimonials {
+    width: 100%;
+    height: 100%;
+    position:relative; 
+    background: url(/img/top-footer-bg.png);
+    background-size: cover;
+
+}
+
+.testimonials-content {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: 1fr; */
+    grid-gap: 10px;
+    grid-template-areas:
+      "header" "content" "content"  ;
+}
+
+@media (min-width: 1020px) {
+.testimonials {
+    width: 100%;
+    height: 100vh;
+    position:relative; 
+    background: url(/img/top-footer-bg.png);
+    background-size: cover;
+
+}
+    .testimonials-content {
+        height: 100%;
+        min-height: 300px;
+        width: 100%;
+        display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "header content";
+    }
+    .testiomonials-text {
+        padding-left: 10%;
+        display:grid;
+        grid-area: header;
+        align-items: center;
+      }   
+  }
+
+  .testimonials-text {
+      display:grid;
+      grid-area: header;
+      align-items: center;
+      margin-top: 10%;
+    }
+
+  .testimonials-text h1 {
+      font-size: 60px;
+      color: white;
+  }
+
+  .testimonials-text p {
+      font-size: 24px;
+      color: white;
+      padding-top: 3%;
+  }
+
+  .button-testi {
+    margin-top: 5%;
+    width: 20%;
+    min-height: 10%;
+    max-height: 30%;
+    text-align: center;
+    color:white;
+    background-color: orange;
+
+  }
+
+  
+  .item2 {
+      grid-area:content;
+  }
+
+  .testimonials-head {
+      margin-top: 10%;
+  }
+
+.testimonials-slide {
+    color: white;
+    border: 2px solid #ccc;
+    background-color: #18191a;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+    width: 80%;
+  }
+  
+  /* Clear floats after containers */
+  .testimonials-slide::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+  .testimonials-slide img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  /* Increase the font-size of a span element */
+  .testimonials-slide span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+  @media (max-width: 500px) {
+    .testimonials-slide {
+      text-align: center;
+    }
+  
+    .testimonials-slide img {
+      margin: auto;
+      float: none;
+      display: block;
+    }
+  }
+
+  @media (min-width: 1020px) {
+    #spacing-testi {
+        margin-left: 10%;
+    }
+  }
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 100vh;
+    position:relative; 
+    background: url(/img/footerbackground.png);
+    background-size: cover;
+}
+
+.content-form {
+    color: white;
+}
+
+.skullimage {
+    background: url(/img/image\ .png);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+
+.content-form form .form-control {
+    background: #eff1f4;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-indent: 9px;
+    height: 45px;
+    margin-right: 10px;
+    min-width: 50vh
+}
+
+.footer-footer {
+    height: 15%;
+}
+
+.list-footer {
+    display:inline;
+}
+
+.footer-last {
+    height: 10%;
+    color: white;
+}
+
+.button-footer {
+    display: inline-block;
+    background-color: orange;
+    min-width: 30vh;
+    color: white;
+}
+
+.footer-link {
+    height: 15%;
+}
+
+
+
+
+
+
+
+
+/* .content-footer {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 5% 80% 15%;
+}
+
+.footer2 {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 40% auto;
+}
+
+.gambarskull {
+    background-color: blue;
+}
+
+.textfooter {
+    background-color: green;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ("partials/head", { title: "Create", href: "/asset/styling.css" }); %>
+
+  <body>
+    <div class="card card-outline-secondary">
+        <div class="card-header">
+          <h3 class="mb-0">Create User Information</h3>
+        </div>
+        <div class="card-body">
+          <form method="POST" action="/users">
+            <fieldset>
+              <label class="mb-0" for="username">Username</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" name="username"  type="text">
+                </div>
+              </div>
+             <label class="mb-0" for="password">Password</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control"  name="password" required="" type="text">
+                </div>
+              </div>
+            <label class="mb-0" for="nama">Nama (biodata)</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <textarea class="form-control"  name="nama" required="" rows="6"></textarea>
+                </div>
+              </div>
+              <label class="mb-0" for="role">Role </label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control"  name="role"  type="text">
+                </div>
+              </div>
+            <button class="btn btn-secondary btn-lg float-right" type="submit">Create User</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+  </body>
+  
+</html>
