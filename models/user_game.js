@@ -1,6 +1,6 @@
 'use strict';
 const { Model } = require('sequelize');
-const { hashPassword } = require('../helpers/bcrypt');
+const { hashPassword } = require('../helpers/bycrypt');
 module.exports = (sequelize, DataTypes) => {
   class user_game extends Model {
     /**

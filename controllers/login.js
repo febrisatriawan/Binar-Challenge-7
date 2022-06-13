@@ -11,10 +11,10 @@ module.exports = {
         if(user_game.findOne({
             where: {username: req.body.username},
         })) {
-            res.send ("benar")
+            res.send ("Welcome, User Id Valid")
         }
         else {
-            res.send('salah')
+            res.send('Try Again, User Id Not Valid!')
         }
     }
 }

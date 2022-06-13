@@ -17,7 +17,7 @@ module.exports = {
     });
   },
 
-  //menciptakan room baru
+  //buat room baru
   create: (req, res) => {
     room
       .create({
