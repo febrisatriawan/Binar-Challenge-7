@@ -1,5 +1,5 @@
-const { room } = require('../models');
 const sequelize = require('sequelize');
+const { room } = require('../models');
 
 module.exports = {
   index: (req, res) => {
@@ -17,7 +17,7 @@ module.exports = {
     });
   },
 
-  //create new room
+  // create new room
   create: (req, res) => {
     room
       .create({
@@ -38,8 +38,8 @@ module.exports = {
     room
       .findOne({ where: { id: req.params.id } })
       .then((resultFindOne) => {
-        let resultFindOneUser1 = resultFindOne.dataValues.move_player_1;
-        let resultFindOneUser2 = resultFindOne.dataValues.move_player_2;
+        const resultFindOneUser1 = resultFindOne.dataValues.move_player_1;
+        const resultFindOneUser2 = resultFindOne.dataValues.move_player_2;
 
         if (resultFindOneUser2 === null || resultFindOneUser2.length < 3) {
           if (userId % 2 === 0) {
@@ -50,10 +50,10 @@ module.exports = {
                   move_player_2: sequelize.fn(
                     'array_append',
                     sequelize.col('move_player_2'),
-                    move_player_2
+                    move_player_2,
                   ),
                 },
-                { where: { id: req.params.id }, returning: true }
+                { where: { id: req.params.id }, returning: true },
               )
               .then((updateRoom) => {
                 res.status(200).json({
@@ -66,8 +66,8 @@ module.exports = {
               });
           }
         } else if (
-          resultFindOneUser1 === null ||
-          resultFindOneUser1.length < 3
+          resultFindOneUser1 === null
+          || resultFindOneUser1.length < 3
         ) {
           if (userId % 2 !== 0) {
             room
@@ -76,17 +76,17 @@ module.exports = {
                   move_player_1: sequelize.fn(
                     'array_append',
                     sequelize.col('move_player_1'),
-                    move_player_1
+                    move_player_1,
                   ),
                 },
-                { where: { id: req.params.id }, returning: true }
+                { where: { id: req.params.id }, returning: true },
               )
               .then((result) => {
-                let arrUser1 = result[1][0].dataValues.move_player_1;
-                let arrUser2 = result[1][0].dataValues.move_player_2;
+                const arrUser1 = result[1][0].dataValues.move_player_1;
+                const arrUser2 = result[1][0].dataValues.move_player_2;
 
-                let finalResultarr = [];
-                let finalResult = '';
+                const finalResultarr = [];
+                const finalResult = '';
 
                 if (arrUser1.length > 3) {
                   arrUser1.length = 3;
