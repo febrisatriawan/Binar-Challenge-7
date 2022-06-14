@@ -7,7 +7,7 @@ const app = express();
 const routes = require('./routes');
 const flash = require('express-flash');
 const passport = require('./lib/passport');
-const { port = 3000 } = process.env;
+const { port = 3001 } = process.env;
 const morgan = require('morgan');
 
 app.use(express.urlencoded({ extended: false }));

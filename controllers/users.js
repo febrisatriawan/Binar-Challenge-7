@@ -10,7 +10,7 @@ module.exports = {
         })
     },
 
-    //done
+    //create
     create: (req,res)=>{
         res.render('users/create')
     },
@@ -35,7 +35,7 @@ module.exports = {
         })
     },
 
-    //done
+    //detail
     detail: (req,res)=>{
         user_game.findOne({
             where: {id: req.params.id},
@@ -48,7 +48,7 @@ module.exports = {
             res.render('users/detail', {data})
         })
     },
-    //done
+    //delete
     destruct: (req,res)=>{
         user_game_biodata.destroy({ where: {user_id: req.params.id}})
         .then(()=>{
@@ -57,7 +57,7 @@ module.exports = {
             res.redirect('/users')
         })
     },
-    //done
+    //update
     formupdate: (req,res)=>{
         user_game.findOne({
             where: {id: req.params.id},

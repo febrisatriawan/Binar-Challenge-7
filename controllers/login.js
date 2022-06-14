@@ -1,4 +1,4 @@
-let data = require('../db/database.json')
+let data = require('../data/database.json')
 const { user_game, user_game_biodata, user_game_history } = require ('../models');
 
 
@@ -11,7 +11,7 @@ module.exports = {
         if(user_game.findOne({
             where: {username: req.body.username},
         })) {
-            res.send ("Welcome, User Id Valid")
+            res.send ("Hallo, Welcome Back")
         }
         else {
             res.send('Try Again, User Id Not Valid!')
