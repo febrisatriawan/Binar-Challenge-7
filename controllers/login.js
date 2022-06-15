@@ -1,4 +1,4 @@
-let data = require('../data/database.json')
+let data = require('../db/database.json')
 const { user_game, user_game_biodata, user_game_history } = require ('../models');
 
 module.exports = {

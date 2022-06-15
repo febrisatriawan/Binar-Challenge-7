@@ -1,0 +1,31 @@
+.headernavbar {
+  color: black;
+  background-color: rgba(0,0,0,.2);
+}
+
+.navbar-brand {
+  padding-left: 5%;
+  color:black;
+  
+}
+
+.navbar-brand:hover {
+  color:black;
+}
+
+.nav-link {
+  color:black;
+}
+
+.nav-link:hover {
+  color:rgb(34, 34, 34);
+}
+
+.signuplogin{
+  color:black;
+}
+
+.navbar-toggler {
+  border-color: black;
+  background-color: grey;
+}

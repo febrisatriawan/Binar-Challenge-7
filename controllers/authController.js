@@ -1,5 +1,5 @@
 const { user_game } = require('../models');
-const { comparePassword } = require('../helpers/bcrypt');
+const { comparePassword } = require('../helpers/bycrypt');
 const { generateToken } = require('../helpers/jwt');
 
 class AuthController {
