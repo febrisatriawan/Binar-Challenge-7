@@ -1,5 +1,5 @@
 const { user_game } = require('../models');
-const { comparePassword } = require('../helpers/bycrypt');
+const { comparePassword } = require('../helpers/bcrypt');
 const { generateToken } = require('../helpers/jwt');
 
 class AuthController {
@@ -32,7 +32,7 @@ class AuthController {
 
       if (!user) {
         return res.status(401).json({
-          message: 'Invalid!, username or Password',
+          message: 'Invalid username or Password',
         });
       }
 
@@ -50,7 +50,7 @@ class AuthController {
         });
       } else {
         return res.status(401).json({
-          message: 'Invalid!, email or password',
+          message: 'Invalid email or password',
         });
       }
     } catch (err) {

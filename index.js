@@ -3,29 +3,22 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const express = require('express');
-
-const app = express();
-const flash = require('express-flash');
 const routes = require('./routes');
-const passport = require('./lib/passport');
-
-const { port = 3001 } = process.env;
-const morgan = require('morgan');
+const app = express();
+const port = 3001;
+const flash = require('express-flash');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(express.static(`${__dirname}/public`));
-
+app.use(express.static(__dirname + '/public'));
+const passport = require('./lib/passport');
 app.use(passport.initialize());
 
 app.set('view engine', 'ejs');
 
 app.use(routes);
-app.use(morgan('dev'));
-
-app.use(flash());
 
 app.listen(port, () => {
-  console.log(`Server is running http://localhost:${port}`);
+  console.log('server menyala');
 });

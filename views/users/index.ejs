@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include ("partials/head", { title: "Index", href: "/asset/styling.css" }); %>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-<body>
-  <h1>List of users: (<%= users.length %>)</h1>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+   ></script>
 
-   <div class="table-responsive-sm">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>username</th>
-          <th>password</th>
-          <th>role</th>
-          <th class="d-print-none">
-            <a class="btn btn-sm btn-success" href="/users/create">Add</a>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <% users.forEach ((i)=>  { %>
-          <tr>
-            <td><%= i.id %></td>
-            <td><%= i.username %></td>
-            <td><%= i.password %></td>
-            <td><%= i.role %></td>
-            <td class="d-print-none">
-              <a class="btn btn-sm btn-primary" href="/users/<%= i.id %>">Detail</a>
-              <a class="btn btn-sm btn-warning" href="/users/update/<%= i.id %>">Update</a>
-              <a class="btn btn-sm btn-danger" href="/users/delete/<%= i.id %>">Delete</a>
-            </td>
-          </tr>
-        <% }) %>
-      </tbody>
-    </table>
-  </div>
-</body>
+   <script
+   src="/assets/bootstrap.min.js"></script>
+
+    <link
+    href="/assets/bootstrap.min.css"
+    type="text/css"
+    rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/assets/styling.css">
+</head>
+    <body>
+      <h1>List of users: (<%= users.length %>)</h1>
+
+       <div class="table-responsive-sm">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>username</th>
+              <th>password</th>
+              <th>role</th>
+              <th class="d-print-none">
+                <a class="btn btn-sm btn-success" href="/users/create">Add</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% users.forEach ((i)=>  { %>
+              <tr>
+                <td><%= i.id %></td>
+                <td><%= i.username %></td>
+                <td><%= i.password %></td>
+                <td><%= i.role %></td>
+                <td class="d-print-none">
+                  <a class="btn btn-sm btn-primary" href="/users/<%= i.id %>">Detail</a>
+                  <a class="btn btn-sm btn-warning" href="/users/update/<%= i.id %>">Update</a>
+                  <a class="btn btn-sm btn-danger" href="/users/delete/<%= i.id %>">Delete</a>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </body>
+
 
 </html>

@@ -11,9 +11,12 @@ const onlySuperAdmin = require('../middlewares/onlySuperAdmin');
 router.get('/', home.index);
 router.get('/game', game.index);
 router.use('/login', loginCrudRouter);
+
 router.use('/api/v1/auth/', authPostmanRouter);
+
 router.use(authentication);
 router.use('/users', onlySuperAdmin, userRouter);
+
 router.use('/room', roomRouter);
 
 module.exports = router;
