@@ -29,11 +29,6 @@ module.exports = {
       });
   },
 
-  //fungsi komparasi
-  //lakukan for loop yang didalamnya ada if function
-  //User_game_history.create function untuk menciptakan tabel baru dan ngepush hasil ke field result({})
-  //   },
-
   fight: (req, res) => {
     const { id_player_2, move_player_1, move_player_2 } = req.body;
     const userId = req.loggedInUser.id;
@@ -97,11 +92,6 @@ module.exports = {
 
                 console.log('ini arrUser1', arrUser1);
 
-                //   if (arrUser1[0] === 'rock' && arrUser2[0] === 'rock') {
-                //     finalResult = 'draw';
-                //     finalResultarr.push(finalResult);
-                //   }
-                //   console.log('dari final result', finalResultarr);
               })
               .catch((err) => {
                 console.log(err);

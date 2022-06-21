@@ -1,7 +1,6 @@
 const { user_game } = require('../models');
 const { comparePassword } = require('../helpers/bycrypt');
 const { generateToken } = require('../helpers/jwt');
-
 class AuthController {
   static register(req, res) {
     const { username, password, role } = req.body;
